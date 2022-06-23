@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #cdcdcc;
+        }
+
+        .ehr {
+            background-image: url(/assets/images/ehr-wrap-bg.bbbc4183a382.jpg),url(/assets/images/plant.webp);
+            background-size: auto,auto;
+            background-repeat: no-repeat;
+            background-position: 0 40px,right -100px;
+            height: 700px;
+        }
+
+        .ehrcircle {
+            background-size: auto,auto;
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            background-image: url(https://www.drchrono.com/site_media/images/ehr-wrap-bg-2.3b313027b7f0.jpg);
+            background-repeat: repeat-x;
+            background-size: contain;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm sticky-top navbar-light bg-light">
+        <div class="container">
+            <div class="collapse navbar-collapse row" id="navbar1">
+                <h3 class="col-md-12 text-center">
+                    DrChrono Patient Form
+                </h3>
+            </div>
+        </div>
+    </nav>
+
+    <div class="ehr wrap container-fluid ">
+        <div class="row">
+            <div class="col-sm-6 col-md-6">
+                <img class="img-responsive home-ipad" style="width: 100%;" src="https://www.drchrono.com/site_media/images/product-devices/telehealth-devices-2.b0555be4ebd5.png" alt="DrChrono's mobile EHR on iPad">
+            </div>
+            <div class="col-sm-6 col-md-6 text-md-left text-sm-center text-xs-center form">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6" style="margin-top:20px;">
+                            <div class="col-md-12">
+                                <div class="form-row">
+                                    <label for="gender" class="col-md-12 mt-3">Gender</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="male" value="Male" @*checked*@>
+                                        <label class="form-check-label" for="male">
+                                            Male
+                                        </label>
+                                    </div>
+                                    <div class="form-check offset-1">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="femail" value="Female">
+                                        <label class="form-check-label" for="Female">
+                                            Female
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="margin-top:20px;">
+                            <label class="col-md-12" for="fname">First Name</label>
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" id="fname" />
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="margin-top:20px;">
+                            <label class="col-md-12" for="lname">Last Name</label>
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" id="lname" />
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="margin-top:20px;">
+                            <label class="col-md-12">DOB</label>
+                            <div class="col-md-12">
+                                <input type="date" class="form-control" id="dob" />
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="margin-top:20px;">
+                            <label class="col-md-12">Scheduled Time</label>
+                            <div class="col-md-12">
+                                <input type="datetime-local" class="form-control" id="Scheduledtime" />
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="margin-top:20px;">
+                            <label class="col-md-12" for="pipf">Patient Photo</label>
+                            <div class="col-md-12">
+                                <input type="file" class="form-control" id="patientphoto" />
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="margin-top:20px;">
+                            <label class="col-md-12" for="pipf">Primary Insurance Photo Front</label>
+                            <div class="col-md-12">
+                                <input type="file" class="form-control" id="frontphoto" />
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="margin-top:20px;">
+                            <label class="col-md-12">Primary Insurance Photo Back</label>
+                            <div class="col-md-12">
+                                <input type="file" class="form-control" id="backphoto" />
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="display:none;">
+                            <label class="col-md-12" for="pid">Doctor Id</label>
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" id="doctorid" value="319130" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-5 mt-4 justify-content-center" style="margin-top:20px;">
+                        <a class="col-md-2 btn" id="submit" style="background-color: #091d3e; color:white;">Submit</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    @*<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>*@
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script>
+        $('#submit').click(function (e) {
+            debugger;
+
+            var logindata = {
+                'Email': "muhammadaqib123321@gmail.com",
+                'Password': "Asdf@123"
+            }
+            $.ajax({
+                type: "POST",
+                url: "https://drchrono.azurewebsites.net/api/account/login",
+                data: JSON.stringify(logindata),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    debugger;
+                    if (result.success == true) {
+                        var elem = "";
+                        var bike1 = document.getElementById("male")
+                        if (bike1.checked) {
+                            elem = bike1.value;
+                        }
+                        var bike2 = document.getElementById("femail")
+                        if (bike2.checked) {
+                            elem = bike2.value;
+                        }
+
+                        var doctorid = $("#doctorid").val();
+                        var firstname = $("#fname").val();
+                        var lastname = $("#lname").val();
+                        var dateofbirth = $("#dob").val();
+                        var Scheduletime = $("#Scheduledtime").val();
+                        var patientphotofile = $("#patientphoto").get(0).files;
+                        var frontphotofile = $("#frontphoto").get(0).files;
+                        var backphotofile = $("#backphoto").get(0).files;
+
+                        debugger;
+                        var data = new FormData;
+                        data.append("DId", 319130);
+                        data.append("First_Name", firstname);
+                        data.append("Last_Name", lastname);
+                        data.append("DOB", dateofbirth);
+                        data.append("scheduled_time", Scheduletime);
+                        data.append("Patient_Image_File", patientphotofile[0]);
+                        data.append("Insurance_Front_Image_File", frontphotofile[0]);
+                        data.append("Insurance_Back_Image_File", backphotofile[0]);
+                        data.append("Gender", elem)
+
+                        debugger;
+
+                        $.ajax({
+                            type: "POST",
+                            url: "https://drchrono.azurewebsites.net/api/postPatientData",
+                            data: data,
+                            headers: { "Authorization": 'Bearer ' + result.token },
+                            contentType: false,
+                            processData: false,
+                            success: function (results) {
+                                debugger;
+                                if (results.success == true) {
+
+                                    debugger;
+                                    $("#doctorid").val(" ");
+                                    $("#fname").val(" ");
+                                    $("#lname").val(" ");
+                                    $("#dob").val(" ");
+                                    $("#frontphoto").val(" ");
+                                    $("#backphoto").val(" ");
+                                    $("#patientphoto").val(" ");
+                                    alert(result.responseText);
+                                    window.location.href = "/";
+
+                                }
+                            }
+                        })
+
+
+                    }
+                }
+            })
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

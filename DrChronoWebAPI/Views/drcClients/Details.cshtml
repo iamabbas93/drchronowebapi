@@ -1,0 +1,54 @@
+﻿@model DrChronoWebAPI.Models.drcClient
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>drcClient</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.clientId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.clientId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.clientSecret)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.clientSecret)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.authorizationEndpoint)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.authorizationEndpoint)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.tokenEndpoint)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.tokenEndpoint)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.redirectUri)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.redirectUri)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.doctorId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.doctorId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,59 @@
+﻿@model DrChronoWebAPI.Models.drcClient
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>drcClient</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="id" />
+            <div class="form-group">
+                <label asp-for="clientId" class="control-label"></label>
+                <input asp-for="clientId" class="form-control" />
+                <span asp-validation-for="clientId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="clientSecret" class="control-label"></label>
+                <input asp-for="clientSecret" class="form-control" />
+                <span asp-validation-for="clientSecret" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="authorizationEndpoint" class="control-label"></label>
+                <input asp-for="authorizationEndpoint" class="form-control" />
+                <span asp-validation-for="authorizationEndpoint" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tokenEndpoint" class="control-label"></label>
+                <input asp-for="tokenEndpoint" class="form-control" />
+                <span asp-validation-for="tokenEndpoint" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="redirectUri" class="control-label"></label>
+                <input asp-for="redirectUri" class="form-control" />
+                <span asp-validation-for="redirectUri" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="doctorId" class="control-label"></label>
+                <input asp-for="doctorId" class="form-control" />
+                <span asp-validation-for="doctorId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
