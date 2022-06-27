@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'drchrono'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2AEBF5E20E0542F09C8F5FC4FD9D65FE }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A7AFC9D5CFAB478A98FE63432B69B5F1 }}
           package: .
